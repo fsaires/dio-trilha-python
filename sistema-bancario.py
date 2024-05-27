@@ -17,11 +17,11 @@ def depositar(saldo, extrato):
         print("Operação falhou! O valor informado é inválido.")
     return saldo, extrato
 
-def sacar(saldo, extrato, numero_saques, LIMITE_SAQUES, limite):
+def sacar(saldo, extrato, numero_saques, limite_saques, limite):
     valor = float(input("Informe o valor do saque: "))
     excedeu_saldo = valor > saldo
     excedeu_limite = valor > limite
-    excedeu_saques = numero_saques >= LIMITE_SAQUES
+    excedeu_saques = numero_saques >= limite_saques
 
     if excedeu_saldo:
         print("Operação falhou! Você não tem saldo suficiente.")
